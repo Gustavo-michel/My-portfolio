@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imgs\1713905588440.jpg" type="image/x-icon">
+    <title>Gustavo Michel Portfolio</title>
+    <style>
+        header {
+            background-color: #828080;
+            color: #000000;
+            padding: 25px 0;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            color: #474554;
+            align-items: baseline;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+        color: #383636;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, padding 0.3s ease;  
+        }
+
+        nav ul li a:hover {
+            background-color: #dddbdb;
+            padding: 10px;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .section {
+            background-color: #ececec;
+            padding:100px 0;
+            text-align: center;
+        }
+
+        .section:nth-child(even) {
+            background-color: #D5D2D2;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #5C5A5A;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #383636;
+        }
+
+        p{
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto; 
+        }
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 10px;
+        }
+
+        .project-card {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.600);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .project-image {
+            width: auto;
+            height: 200px;
+            margin: 5px 5px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-info {
+            
+            padding: 20px;
+        }
+
+        .project-info h3,
+        .project-info p {
+            margin: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .fade-in.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+         
+        .bubble-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        }
+
+        .bubble {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+
+        .bubble:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #828080;
+            padding: 5px 0;
+            text-align: center;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-bubble {
+            display: inline-block;
+            margin: 0 10px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-size: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+        .linkedin {
+            background-image: url('imgs/61109.png');
+        }
+
+        .gmail {
+            background-image: url('imgs/gmail_512_black.png');
+        }
+
+        .github {
+            background-image: url('imgs/github_black_logo_icon_147128.png');
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                Gustavo Michel
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#section1">Início</a></li>
+                    <li><a href="#section2">Sobre</a></li>
+                    <li><a href="#section3">Tecnologias</a></li>
+                    <li><a href="#section4">Projetos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="section" id="section1">
+        <img src="imgs\1713905588440.jpg" alt="Sua Foto" style="border-radius: 50%; width: 200px; height: 200px;">
+        <h2>Gustavo Michel</h2>
+        <div class="contact-container">
+            <a href="www.linkedin.com/in/gustavo-michel-araujo" target="_blank" class="contact-bubble linkedin"></a>
+            <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
+            <a href="Github.com/gustavo-michel" target="_blank" class="contact-bubble github"></a>
+        </div>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>Sobre Mim</h2>
+        <p class="fade-in">Utilizo linguagens como Python, C++ e SQL para realizar análises, pesquisas e transformar dados em insights para uma análise prescritiva de caso, e junto com bibliotecas do Python criar modelos de machine learning e Deep Learning para análises preditivas, como base da ciência de dados, criando soluções coerentes com os problemas apresentados dentre as bibliotecas utilizadas estão Tensorflow, scikit-learn, Pandas, Matplotlib, Seaborn e Plotly. Também possuo conhecimento solido sobre banco de dados, Bigdatas e ferramentas de geração de tabelas e dashboards como Excel e Power BI e deploy com Flask.</p>
+    </div>
+
+    <div class="section" id="section3">
+        <h2>Tecnologias e Ferramentas</h2>
+        <div class="bubble-container fade-in">
+            <div class="bubble" style="background-color: #3572A5;">Python</div>
+            <div class="bubble" style="background-color: #ffc20a;">TensorFlow</div>
+            <div class="bubble" style="background-color: #E5CD0C;">SQL Server</div>
+            <div class="bubble" style="background-color: #F2C94C;">Power BI</div>
+            <div class="bubble" style="background-color: #F34B7D;">C++</div>
+            <div class="bubble" style="background-color: #4c70f2;">azure</div>
+        </div>
+        
+    </div>
+
+
+    <div class="section" id="section4"> 
+        <h2>Projetos</h2>
+        <div class="projects-container">
+            <div class="project-card fade-in">
+                <h3>Detecção de fraude no cartão de credito</h3>
+                <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"><div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <div class="project-info">
+                    <p>Descrição do Projeto 1.</p>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <h3>Classificador de animais</h3>
+                <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"><div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <div class="project-info">
+                    <p>Descrição do Projeto 1.</p>
+                </div>
+            </div>
+            <div class="project-card fade-in">
+                <h3>Predição de Churn(cancelamento)</h3>
+                <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"><div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <div class="project-info">
+                    <p>Descrição do Projeto 1.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.fade-in');
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < (windowHeight * 0.85)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+        });
+    </script>
+        <footer>
+            <h2>Contatos</h2>
+            <div class="contact-container">
+                <a href="www.linkedin.com/in/gustavo-michel-araujo" class="contact-bubble linkedin"></a>
+                <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
+                <a href="Github.com/gustavo-michel" class="contact-bubble github"></a>
+            </div>
+        </footer>
+</body>
+</html>
