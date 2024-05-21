@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imgs\1713905588440.jpg" type="image/x-icon">
+    <link rel="icon" href="imgs\foto.jpg" type="image/x-icon">
     <title>Gustavo Michel Portfolio</title>
     <style>
         header {
@@ -24,6 +24,7 @@
 
         .logo {
             color: #474554;
+            font-weight: bold;
             align-items: baseline;
             font-size: 24px;
         }
@@ -63,7 +64,7 @@
 
         .section {
             background-color: #ececec;
-            padding:100px 0;
+            padding:75px 0;
             text-align: center;
         }
 
@@ -101,6 +102,9 @@
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+        }
+        .project-card:hover {
+            background-color: #ffffff22;
         }
 
         .project-image {
@@ -184,15 +188,17 @@
             transition: transform 0.3s ease-out;
         }
         .linkedin {
-            background-image: url('imgs/61109.png');
+            background-image: url('imgs/lknd.png');
         }
 
         .gmail {
-            background-image: url('imgs/gmail_512_black.png');
+            background-image: url('imgs/gmail.png');
+            width: 120px;
+            height: 120px;
         }
 
         .github {
-            background-image: url('imgs/github_black_logo_icon_147128.png');
+            background-image: url('imgs/github.png');
         }
     </style>
 </head>
@@ -208,12 +214,13 @@
                     <li><a href="#section2">Sobre</a></li>
                     <li><a href="#section3">Tecnologias</a></li>
                     <li><a href="#section4">Projetos</a></li>
+                    <li><a href="#footer">contatos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <div class="section" id="section1">
-        <img src="imgs\1713905588440.jpg" alt="Sua Foto" style="border-radius: 50%; width: 200px; height: 200px;">
+        <img src="imgs\foto.jpg" alt="Foto" style="border-radius: 50%; width: 200px; height: 200px;">
         <h2>Gustavo Michel</h2>
         <div class="contact-container">
             <a href="www.linkedin.com/in/gustavo-michel-araujo" target="_blank" class="contact-bubble linkedin"></a>
@@ -223,12 +230,12 @@
     </div>
 
     <div class="section" id="section2">
-        <h2>Sobre Mim</h2>
+        <h2 class="fade-in">Sobre Mim</h2>
         <p class="fade-in">Utilizo linguagens como Python, C++ e SQL para realizar análises, pesquisas e transformar dados em insights para uma análise prescritiva de caso, e junto com bibliotecas do Python criar modelos de machine learning e Deep Learning para análises preditivas, como base da ciência de dados, criando soluções coerentes com os problemas apresentados dentre as bibliotecas utilizadas estão Tensorflow, scikit-learn, Pandas, Matplotlib, Seaborn e Plotly. Também possuo conhecimento solido sobre banco de dados, Bigdatas e ferramentas de geração de tabelas e dashboards como Excel e Power BI e deploy com Flask.</p>
     </div>
 
     <div class="section" id="section3">
-        <h2>Tecnologias e Ferramentas</h2>
+        <h2 class="fade-in">Tecnologias e Ferramentas</h2>
         <div class="bubble-container fade-in">
             <div class="bubble" style="background-color: #3572A5;">Python</div>
             <div class="bubble" style="background-color: #ffc20a;">TensorFlow</div>
@@ -242,7 +249,7 @@
 
 
     <div class="section" id="section4"> 
-        <h2>Projetos</h2>
+        <h2 class="fade-in">Projetos</h2>
         <div class="projects-container">
             <div class="project-card fade-in">
                 <h3>Detecção de fraude no cartão de credito</h3>
@@ -251,20 +258,31 @@
                     <p>Descrição do Projeto 1.</p>
                 </div>
             </div>
+
             <div class="project-card fade-in">
                 <h3>Classificador de animais</h3>
-                <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"><div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <a href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50"><div class="project-image" style="background-image: url('imgs/animals.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
                 <div class="project-info">
                     <p>Descrição do Projeto 1.</p>
                 </div>
             </div>
+
             <div class="project-card fade-in">
                 <h3>Predição de Churn(cancelamento)</h3>
-                <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"><div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <a href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict"><div class="project-image" style="background-image: url('imgs/churnimg.png');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
                 <div class="project-info">
                     <p>Descrição do Projeto 1.</p>
                 </div>
             </div>
+
+            <div class="project-card fade-in">
+                <h3>Predição de Churn(cancelamento)</h3>
+                <a href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict"><div class="project-image" style="background-image: url('imgs/churnimg.png');"></div><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"></a>
+                <div class="project-info">
+                    <p>Descrição do Projeto 1.</p>
+                </div>
+            </div>
+
         </div>
     </div>
     
@@ -277,7 +295,7 @@
                 const sectionTop = section.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
                 
-                if (sectionTop < (windowHeight * 0.85)) {
+                if (sectionTop < (windowHeight * 1.00)) {
                     section.classList.add('active');
                 } else {
                     section.classList.remove('active');
@@ -287,7 +305,7 @@
     </script>
         <footer>
             <h2>Contatos</h2>
-            <div class="contact-container">
+            <div class="contact-container" id="footer">
                 <a href="www.linkedin.com/in/gustavo-michel-araujo" class="contact-bubble linkedin"></a>
                 <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
                 <a href="Github.com/gustavo-michel" class="contact-bubble github"></a>
