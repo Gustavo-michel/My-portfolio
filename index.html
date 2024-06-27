@@ -8,228 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>Gustavo Michel</title>
-    <style>
-        header {
-            background-color: #3e3c3c;
-            padding: 25px 0;
-        }
-
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            color: #cacaf0;
-            font-size: 1.5rem;
-            margin: 0 -120px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-        color: #c7c3c3;
-        text-decoration: none;
-        font-size: 20px;
-        padding: 5px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, padding 0.3s ease;  
-        }
-
-        nav ul li a:hover {
-            background-color: #2f2e2e;
-            padding: 10px;
-        }
-
-
-        body {
-            font-family: "Lato", sans-serif;
-            font-style: normal;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-        }
-
-        .section {
-            padding: 75px 0;
-            text-align: center;
-            background: linear-gradient(to bottom, #F2F2F2 0%, #E0E0E0 100%);
-        }
-
-    .section:nth-child(even) {
-            background: linear-gradient(to bottom, #E0E0E0 0%, #F2F2F2 100%);
-        }
-
-        .section h2 {
-            margin-bottom: 20px;
-            font-size: 48px;
-            color: #101218;
-        }
-        h2{
-            font-size: 35px;
-            color: #101218;
-        }
-
-        .section p {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 32px;
-            line-height: 1.3em;
-            color: #5f6167;
-        }
-
-        p{
-            text-align: center;
-            max-width: 925px;
-            margin: 0 auto; 
-        }
-
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding-left: 10px;
-        }
-
-        .project-card {
-            width: calc(33.33% - 20px);
-            margin-bottom: 20px;
-            margin-right: 10px;
-            background-color: rgba(255, 255, 255, 0.600);
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        .project-card:hover {
-            background-color: #ffffff22;
-        }
-        .project-image {
-            width: auto;
-            height: 200px;
-            margin: 5px 5px;
-            border-radius: 7px;
-            background-size: cover;
-            background-position: center;
-        }
-        .project-info {
-            padding: 20px;
-        }
-        .project-info h3,
-        .project-info p {
-            font-size: 17px;
-            margin: 0;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        }
-
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .bubble-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        margin-top: 30px;
-        }
-        .bubble {
-            display: inline-block;
-            margin: 5px;
-            padding: 5px 20px;
-            border-radius: 20px;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            transition: transform 0.3s ease-out;
-        }
-        .bubble:hover {
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: #828080;
-            padding: 5px 0;
-            text-align: center;
-        }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .contact-bubble {
-            display: inline-block;
-            margin: 0 10px;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-size: cover;
-            cursor: pointer;
-            transition: transform 0.3s ease-out;
-        }
-
-        .linkedin {
-            background-image: url('imgs/lknd.png');
-        }
-        .gmail {
-            background-image: url('imgs/gmail.png');
-            width: 120px;
-            height: 120px;
-        }
-        .github {
-            background-image: url('imgs/github.png');
-        }
-        .phone{
-            background-image: url('imgs/wpp.png');
-            width: 100px;
-            height: 100px;
-        }
-
-        #backToTopBtn {
-            display: none; /* Oculto por padrão */
-            position: fixed;
-            bottom: 20px;
-            right: 30px;
-            z-index: 99;
-            font-size: 18px;
-            border: none;
-            outline: none;
-            background-color: #55555576;
-            color: white;
-            cursor: pointer;
-            padding: 20px;
-            border-radius: 20px;
-        }
-        #backToTopBtn:hover {
-            background-color: #000;
-        }
-        #backToTopBtn i {
-            font-size: 25px;
-        }
-
-    </style>
 </head>
 <body>
     <header>
@@ -245,6 +27,14 @@
                     <li><a href="#footer">contatos</a></li>
                 </ul>
             </nav>
+            <div class="language-switcher">
+                <button onclick="changeLanguage('pt')">
+                    <span class="flag-icon flag-icon-br"></span> PT
+                </button>
+                <button onclick="changeLanguage('en')">
+                    <span class="flag-icon flag-icon-us"></span> EN
+                </button>
+            </div>
         </div>
     </header>
 
@@ -258,20 +48,15 @@
     </div>
 
     <div class="section" id="Sobre">
-        <h2 class="fade-in">Sobre Mim</h2>
-        <p class="fade-in">Estudo programação há 4 anos, desde os meus 13 anos de idade. Inicialmente, vi que tinha mais afinidade na área de backend, mas quando conheci o Python, me aprofundei na área de dados. Isso me levou a elaborar um plano de carreira, desenvolvendo projetos e conhecendo novas tecnologias todos os dias, como C++, SQL, Power BI e diversas bibliotecas que utilizo atualmente, 
-            com essas tecnologias faço a analise de dados e contrução de modelos de Machine Learning e Deep Learning, além de integrá-los ao sistema.</p>
+        <h2 class="fade-in" data-lang data-lang-pt="Sobre Mim" data-lang-en="About Me"></h2>
+        <p class="fade-in" data-lang data-lang-pt="Estudo programação há 4 anos, desde os meus 13 anos de idade. Inicialmente, vi que tinha mais afinidade na área de backend, mas quando conheci o Python, me aprofundei na área de dados. Isso me levou a elaborar um plano de carreira, desenvolvendo projetos e conhecendo novas tecnologias todos os dias, como C++, SQL, Power BI e diversas bibliotecas que utilizo atualmente, 
+        com essas tecnologias faço a analise de dados e contrução de modelos de Machine Learning e Deep Learning, além de integrá-los ao sistema." data-lang-en="I have been studying programming for 4 years, since I was 13 years old, Initially, I had more details in the backend area, but when I discovered Python, I delved deeper into the data area. This led me to develop a career plan, developing projects and learning about new technologies every day, such as C++, SQL, Power BI and several libraries that we currently use, 
+        With these technologies I analyze data and build Machine Learning and Deep Learning models, in addition to integrating them into the system."></p>
     </div>
 
     <div class="section" id="Stacks">
-        <h2 class="fade-in">Tecnologias e Ferramentas</h2>
+        <h2 class="fade-in" data-lang data-lang-pt="Tecnologias e Ferramentas" data-lang-en="Technologies and Tools"></h2>
         <div class="bubble-container fade-in">
-            <!-- <div class="bubble" style="background-color: #3572A5;">Python</div>
-            <div class="bubble" style="background-color: #ffc20a;">TensorFlow</div>
-            <div class="bubble" style="background-color: #E5CD0C;">SQL Server</div>
-            <div class="bubble" style="background-color: #F2C94C;">Power BI</div>
-            <div class="bubble" style="background-color: #F34B7D;">C++</div>
-            <div class="bubble" style="background-color: #4c70f2;">azure</div> -->
             <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="50" />  
             <img width="15" />
             <img class="bubble" src="https://skillicons.dev/icons?i=cpp" height="50" alt="cplusplus logo"/>
@@ -296,16 +81,16 @@
         
     </div>
 
-
     <div class="section" id="Projects"> 
-        <h2 class="fade-in">Projetos</h2>
+        <h2 data-lang data-lang-pt="Projetos" data-lang-en="Projects"></h2>
         <div class="projects-container">
-
+        
             <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict" style="text-decoration: none; color: #000;">
                 <h3>Predição de Churn(cancelamento)</h3>
                 <div class="project-image" style="background-image: url('imgs/churnimg.png');"></div>
                 <div class="project-info">
-                    <p>análise exploratória de dados e previsão de rotatividade com um conjunto de dados bancários com aprendizado de máquina e implantação na web</p>
+                    <p data-lang data-lang-pt="análise exploratória de dados e previsão de rotatividade com um conjunto de dados bancários com aprendizado de máquina e implantação na web" data-lang-en="
+                    exploratory data analysis and churn prediction with a bank dataset with machine learning and web deployment">
                 </div>
                 </a>
             </div>
@@ -314,7 +99,7 @@
                 <h3>Detecção de fraude no cartão de credito</h3>
                 <div class="project-image" style="background-image: url('imgs/1714591841695.jpg');"></div>
                 <div class="project-info">
-                    <p>Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor</p>
+                    <p data-lang data-lang-pt="Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor" data-lang-en="Exploratory data analysis and fraud prediction on credit card customers to prevent future fraud and consumer harm">
                 </div> 
                 </a>
             </div>
@@ -332,7 +117,7 @@
                 <h3>IA Financial Trader Agent</h3>
                 <div class="project-image" style="background-image: url('imgs/iatrader.jpg');"></div>
                 <div class="project-info">
-                    <p>Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações.</p>
+                    <p data-lang data-lang-pt="Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações." data-lang-en="This project is an implementation of an AI Trader that uses reinforcement learning to predict a company's actions. AI Trader is capable of making buying and selling decisions based on historical stock market data.">
                 </div>
                 </a>
             </div>
@@ -341,7 +126,7 @@
                 <h3>Classificador Qualidade do Ar Mundial</h3>
                 <div class="project-image" style="background-image: url('imgs/waq.png');"></div>
                 <div class="project-info">
-                    <p>mostra como é a qualidade do ar nas regiões ao redor do mundo, mostrando o pais e a cidade,Um Classificador consegue prever como será a qualidade do ar por região. </p>
+                    <p data-lang data-lang-pt="Mstra como é a qualidade do ar nas regiões ao redor do mundo, mostrando o pais e a cidade,Um Classificador consegue prever como será a qualidade do ar por região." data-lang-en="Shows what the air quality is like in regions around the world, showing the country and the city, A Classifier can predict what the air quality will be like by region.">
                 </div>
                 </a>
             </div>
@@ -349,45 +134,9 @@
         </div>
     </div>
     <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
-    
-
-    <script>
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('.fade-in');
-            
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (sectionTop < (windowHeight * 1.00)) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
-        });
-
-        let backToTopBtn = document.getElementById("backToTopBtn");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                backToTopBtn.style.display = "block";
-            } else {
-                backToTopBtn.style.display = "none";
-            }
-        }
-
-        backToTopBtn.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-    </script>
+    <script src="script.js"></script>
         <footer>
-            <h2>Contatos</h2>
+            <h2 data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></h2>
             <div class="contact-container" id="footer">
                 <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank" class="contact-bubble linkedin"></a>
                 <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
