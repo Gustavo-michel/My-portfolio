@@ -40,3 +40,20 @@ elements.forEach(element => {
     element.innerHTML = element.getAttribute(`data-lang-${lang}`);
 });
 }
+const toggleThemeButton = document.getElementById('toggleTheme');
+const body = document.body;
+
+// Verificar o tema atual no carregamento da página
+const currentTheme = localStorage.getItem('theme') || 'dark';
+body.classList.add(`${currentTheme}-theme`);
+
+// Alterar o tema ao clicar no botão
+toggleThemeButton.addEventListener('click', () => {
+    if (body.classList.contains('dark-theme')) {
+        body.classList.replace('dark-theme', 'light-theme');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.replace('light-theme', 'dark-theme');
+        localStorage.setItem('theme', 'dark');
+    }
+});
