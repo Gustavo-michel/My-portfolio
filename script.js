@@ -57,3 +57,7 @@ toggleThemeButton.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
     }
 });
+
+function scrollToSection() {
+    document.querySelector("#footer").scrollIntoView({ behavior: "smooth" });
+}

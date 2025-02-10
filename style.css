@@ -3,7 +3,6 @@ header {
     padding: 25px 0;
 }
 
-
 .container {
     display: flex;
     justify-content: space-between;
@@ -87,78 +86,81 @@ color: #939090;
 
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 0 0.625rem;
-        box-sizing: border-box;
-    }
-    .logo {
-        margin: 0;
-    }
-    .language-switcher {
-        margin-right: 0;
-    }
-    nav {
-        margin-left: 0;
-        width: 100%;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li {
-        margin-left: 0;
-        margin-bottom: 0.625rem;
-    }
-    .projects-container {
-        padding-left: 0;
-    }
-    .project-card {
-        width: calc(50% - 10px);
-    }
-    .section p {
-        font-size: 24px;
-    }
-    .bubble {
-        font-size: 16px;
-    }
-    .contact-bubble {
-        width: 50px;
-        height: 50px;
-    }
-    .gmail, .phone {
-        width: 80px;
-        height: 80px;
-    }
+.scroll-hint {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    margin-top: 20px;
+    text-decoration: none;
+    user-select: none;
+    gap: 5px;
 }
 
-@media only screen and (max-width: 480px) {
-    .section h2 {
-        font-size: 36px;
-    }
-    .section p {
-        font-size: 20px;
-    }
-    .bubble-container {
-        flex-direction: column;
-    }
-    .bubble {
-        width: 80%;
-        margin: 5px auto;
-    }
-    .project-card {
-        width: 100%;
-    }
+.arrow-container {
+    position: relative;
+    width: 40px;
+    height: 14px;
 }
 
+.arrow-line {
+    width: 40px;
+    height: 2px;
+    background: black;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-icon {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.arrow-icon::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(45deg);
+    left: 50%;
+    top: 0;
+    margin-left: -6px;
+}
+
+.scroll-hint:hover .arrow-line {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+}
+
+.scroll-hint:hover .arrow-icon {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+/* Section */
 .section {
     padding: 75px 0;
     text-align: center;
@@ -282,7 +284,7 @@ margin-top: 30px;
 
 footer {
     background-color: #504e4e;
-    padding: 2px 0;
+    padding: 25px 0;
     text-align: center;
 }
 
@@ -308,29 +310,43 @@ footer {
     transition: background-color 0.3s ease, padding 0.3s ease;
     width: 60px;
     height: 60px;
+    opacity: 0.7;
 }
 .linkedin:hover{
-    padding: 5px;
+    padding: 2px;
+}
+
+.github {
+    background-image: url('imgs/github.png');
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+}
+.github:hover{
+    padding: 2px;
 }
 
 .gmail {
     background-image: url('imgs/gmail.png');
+    transition: background-color 0.3s ease, padding 0.3s ease;
     width: 80px;
     height: 80px;
+    opacity: 0.7;
 }
-.github {
-    background-image: url('imgs/github.png');
-    transition: background-color 0.3s ease, padding 0.3s ease;  
-    width: 60px;
-    height: 60px;
+.gmail:hover{
+    padding: 2px;
 }
-.github:hover{
-    padding: 5px;
-}
+
 .phone{
     background-image: url('imgs/wpp.png');
+    transition: background-color 0.3s ease, padding 0.3s ease;
     width: 80px;
     height: 80px;
+    opacity: 0.7;
+}
+.phone:hover{
+    padding: 2px;
 }
 
 #backToTopBtn {
@@ -353,4 +369,69 @@ footer {
 }
 #backToTopBtn i {
     font-size: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 0.625rem;
+        box-sizing: border-box;
+    }
+    .logo {
+        margin: 0;
+    }
+    .language-switcher {
+        margin-right: 0;
+    }
+    nav {
+        margin-left: 0;
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.625rem;
+    }
+    .projects-container {
+        padding-left: 0;
+    }
+    .project-card {
+        width: calc(50% - 10px);
+    }
+    .section p {
+        font-size: 24px;
+    }
+    .bubble {
+        font-size: 16px;
+    }
+    .contact-bubble {
+        width: 50px;
+        height: 50px;
+    }
+    .gmail, .phone {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section h2 {
+        font-size: 36px;
+    }
+    .section p {
+        font-size: 20px;
+    }
+    .bubble-container {
+        flex-direction: column;
+    }
+    .bubble {
+        width: 80%;
+        margin: 5px auto;
+    }
+    .project-card {
+        width: 100%;
+    }
 }

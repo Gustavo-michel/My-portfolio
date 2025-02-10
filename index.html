@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="style.css">
@@ -47,13 +48,19 @@
             <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank" class="contact-bubble linkedin"></a>
             <a href="https://github.com/Gustavo-michel" target="_blank" class="contact-bubble github"></a>
         </div>
+        <div class="scroll-hint" onclick="scrollToSection()">
+            <span data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></span>
+            <div class="arrow-container">
+                <div class="arrow-line"></div>
+                <div class="arrow-icon"></div>
+            </div>
+        </div>
     </div>
 
     <div class="section" id="Sobre">
         <h2 class="section-title fade-in" data-lang data-lang-pt="Sobre mim" data-lang-en="About Me"></h2>
-        <p class="fade-in" data-lang data-lang-pt="Estudo programação há 4 anos. Inicialmente, vi que tinha mais afinidade na área de backend, mas acabei migrando para área de dados. Isso me levou a elaborar um plano de carreira, desenvolvendo projetos e conhecendo novas tecnologias todos os dias, como C++, SQL, Power BI e diversas bibliotecas que utilizo atualmente, 
-        com essas tecnologias faço a analise de dados e contrução de modelos de Machine Learning e Deep Learning, além de integrá-los ao sistema." data-lang-en="I have been studying programming for 4 years, Initially, I had more details in the backend area, but when I discovered Python, I delved deeper into the data area. This led me to develop a career plan, developing projects and learning about new technologies every day, such as C++, SQL, Power BI and several libraries that we currently use, 
-        With these technologies I analyze data and build Machine Learning and Deep Learning models, in addition to integrating them into the system."></p>
+        <p class="fade-in" data-lang data-lang-pt=" Estudo programação há quatro anos, com foco atual na área de dados. Minha trajetória me levou a elaborar um plano de carreira sólido, desenvolvendo projetos e explorando novas tecnologias diariamente. Tenho experiência em C++, SQL e diversas bibliotecas que utilizo para análise de dados, construção de modelos de Machine Learning e Deep Learning, além de sua integração aos sistemas. Busco constantemente aprimorar minhas habilidades e acompanhar as inovações do setor, transformando dados e criando soluções inteligentes." 
+        data-lang-en=" I have been studying programming for four years, with a current focus on the data area. My path led me to develop a solid career plan, developing projects and exploring new technologies daily. I have experience in C++, SQL and several libraries that I use for data analysis, building Machine Learning and Deep Learning models, in addition to their integration into systems. I constantly seek to improve my skills and keep up with innovations in the sector, transforming data and creating intelligent solutions."></p>
     </div>
 
     <div class="section" id="Stacks">
@@ -97,11 +104,23 @@
                 </a>
             </div>
 
+            
+            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/HandMotion" style="text-decoration: none; color: #000;">
+                <h3 data-lang data-lang-pt="HandMotion" data-lang-en="HandMotion"></h3>
+                <div class="project-image" style="background-image: url('imgs/Handmotion.png');"></div>
+                <div class="project-info">
+                    <p data-lang data-lang-pt="Sistema de rastreamento por gestos das mãos que utiliza OpenCV e MediaPipe com uma rede neural construida com Tensorflow para rastrear a posição das mãos via webcam e transformar em comandos ao computador em tempo real." 
+                    data-lang-en="Hand gesture tracking system that uses OpenCV and MediaPipe with a neural network built with Tensorflow to track hand position via webcam and transform it into commands to the computer in real time.">
+                </div>
+                </a>
+            </div>
+
             <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection" style="text-decoration: none; color: #000;">
                 <h3 data-lang data-lang-pt="Detecção de fraude no cartão de credito" data-lang-en="Credit card fraud detection"></h3>
                 <div class="project-image" style="background-image: url('imgs/creditfraud.jpg');"></div>
                 <div class="project-info">
-                    <p data-lang data-lang-pt="Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor" data-lang-en="Exploratory data analysis and fraud prediction on credit card customers to prevent future fraud and consumer harm">
+                    <p data-lang data-lang-pt="Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor" 
+                    data-lang-en="Exploratory data analysis and fraud prediction on credit card customers to prevent future fraud and consumer harm">
                 </div> 
                 </a>
             </div>
@@ -110,7 +129,8 @@
                 <h3 data-lang data-lang-pt="Classificador de animais" data-lang-en="Animals classifier"></h3>
                 <div class="project-image" style="background-image: url('imgs/animals.jpg');"></div>
                 <div class="project-info">
-                    <p data-lang data-lang-pt="Classificador de animais usando Deep Learning com tensorflow e transferencia de aprendizado para indentificar especies" data-lang-en="Animal classifier using Deep Learning with tensorflow and transfer learning to identify species"></p>
+                    <p data-lang data-lang-pt="Classificador de animais usando Deep Learning com tensorflow e transferencia de aprendizado para indentificar especies" 
+                    data-lang-en="Animal classifier using Deep Learning with tensorflow and transfer learning to identify species"></p>
                 </div>
                 </a>
             </div>
@@ -119,18 +139,8 @@
                 <h3>IA Financial Trader Agent</h3>
                 <div class="project-image" style="background-image: url('imgs/iatrader.jpg');"></div>
                 <div class="project-info">
-                    <p data-lang data-lang-pt="Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações." data-lang-en="This project is an implementation of an AI Trader that uses reinforcement learning to predict a company's actions. AI Trader is capable of making buying and selling decisions based on historical stock market data.">
-                </div>
-                </a>
-            </div>
-
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/HandMotion" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="HandMotion" data-lang-en="HandMotion"></h3>
-                <div class="project-image" style="background-image: url('imgs/Handmotion.png');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Sistema de rastreamento por gestos das mãos que utiliza OpenCV e MediaPipe para rastrear a posição das mãos
-                    via webcam em tempo real.." data-lang-en="Hand gesture tracking system that uses OpenCV and MediaPipe to track hand position
-                    via webcam in real time.">
+                    <p data-lang data-lang-pt="Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações." 
+                    data-lang-en="This project is an implementation of an AI Trader that uses reinforcement learning to predict a company's actions. AI Trader is capable of making buying and selling decisions based on historical stock market data.">
                 </div>
                 </a>
             </div>
@@ -149,7 +159,6 @@
     <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
     <script src="script.js"></script>
         <footer>
-            <h2 data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></h2>
             <div class="contact-container" id="footer">
                 <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank" class="contact-bubble linkedin"></a>
                 <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
