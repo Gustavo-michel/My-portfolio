@@ -152,7 +152,7 @@ body {
 
 .scroll-hint:hover .arrow-line {
     opacity: 0;
-    transform: translate(-50%, -10px);
+    transform: translate(-50%, 0px);
 }
 
 .scroll-hint:hover .arrow-icon {
@@ -288,6 +288,10 @@ footer {
     text-align: center;
 }
 
+.credits {
+    margin-top: 20px; 
+}
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -313,7 +317,7 @@ footer {
     opacity: 0.7;
 }
 .linkedin:hover{
-    padding: 2px;
+    transform: scale(1.1);
 }
 
 .github {
@@ -324,7 +328,7 @@ footer {
     opacity: 0.7;
 }
 .github:hover{
-    padding: 2px;
+    transform: scale(1.1);
 }
 
 .gmail {
@@ -335,7 +339,7 @@ footer {
     opacity: 0.7;
 }
 .gmail:hover{
-    padding: 2px;
+    transform: scale(1.1);
 }
 
 .phone{
@@ -346,7 +350,7 @@ footer {
     opacity: 0.7;
 }
 .phone:hover{
-    padding: 2px;
+    transform: scale(1.1);
 }
 
 #backToTopBtn {
@@ -365,7 +369,7 @@ footer {
     border-radius: 20px;
 }
 #backToTopBtn:hover {
-    background-color: #000;
+    background-color: #393939d7;
 }
 #backToTopBtn i {
     font-size: 25px;
