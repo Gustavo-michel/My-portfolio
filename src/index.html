@@ -1,174 +1,405 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="imgs\icon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="./output.css" rel="stylesheet">
-    <title>Gustavo Michel</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Favicon -->
+   <link rel="icon" href="imgs/icon.png" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+
+  <!-- Font Awesome & Flag Icon CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Roboto"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <title>Gustavo Michel</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                Gustavo Michel
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#Sobre" data-lang data-lang-pt="Sobre" data-lang-en="About"></a></li>
-                    <li><a href="#Stacks" data-lang data-lang-pt="Tecnologias" data-lang-en="Technologies"></a></li>
-                    <li><a href="#Projects" data-lang data-lang-pt="Projetos" data-lang-en="Projects"></a></li>
-                    <li><a href="docs\Currículo_Gustavo_Michel.pdf" target="_blank" data-lang data-lang-pt="Currículo" data-lang-en="Resume"></a></li>
+<body class="font-sans m-0 p-0 scroll-smooth">
+  <!-- HEADER -->
+  <header class="bg-[#3e3c3c] py-[25px]">
+    <div class="max-w-[75rem] mx-auto px-[20px] flex items-center justify-between w-full">
+      <!-- Logo -->
+      <div class="-ml-[120px] -mr-[120px] flex-1">
+        <span class="text-[#cacaf0] text-[1.5rem] font-bold">Gustavo Michel</span>
+      </div>
 
-                    <li><a href="#footer" data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></a></li>
-                </ul>
-            </nav>
-            <!-- <div class="theme-switcher">
-                <button id="toggleTheme">Alterar Tema</button>
-            </div>             -->
-            <div class="language-switcher">
-                <button onclick="changeLanguage('pt')">
-                    <span class="flag-icon flag-icon-br"></span> PT
-                </button>
-                <button onclick="changeLanguage('en')">
-                    <span class="flag-icon flag-icon-us"></span> EN
-                </button>
-            </div>
-        </div>
-    </header>
+      <!-- Navegação -->
+      <nav class="ml-auto">
+        <ul class="flex items-center">
+          <li class="ml-[20px]">
+            <a
+              href="#Sobre"
+              class="text-[#c7c3c3] text-[1.25rem] rounded-[5px] px-[5px] py-[2px] hover:bg-[#2f2e2e] transition"
+              data-lang
+              data-lang-pt="Sobre"
+              data-lang-en="About"
+            ></a>
+          </li>
+          <li class="ml-[20px]">
+            <a
+              href="#Stacks"
+              class="text-[#c7c3c3] text-[1.25rem] rounded-[5px] px-[5px] py-[2px] hover:bg-[#2f2e2e] transition"
+              data-lang
+              data-lang-pt="Tecnologias"
+              data-lang-en="Technologies"
+            ></a>
+          </li>
+          <li class="ml-[20px]">
+            <a
+              href="#Projects"
+              class="text-[#c7c3c3] text-[1.25rem] rounded-[5px] px-[5px] py-[2px] hover:bg-[#2f2e2e] transition"
+              data-lang
+              data-lang-pt="Projetos"
+              data-lang-en="Projects"
+            ></a>
+          </li>
+          <li class="ml-[20px]">
+            <a
+              href="docs/Currículo_Gustavo_Michel.pdf"
+              target="_blank"
+              class="text-[#c7c3c3] text-[1.25rem] rounded-[5px] px-[5px] py-[2px] hover:bg-[#2f2e2e] transition"
+              data-lang
+              data-lang-pt="Currículo"
+              data-lang-en="Resume"
+            ></a>
+          </li>
+          <li class="ml-[20px]">
+            <a
+              href="#footer"
+              class="text-[#c7c3c3] text-[1.25rem] rounded-[5px] px-[5px] py-[2px] hover:bg-[#2f2e2e] transition"
+              data-lang
+              data-lang-pt="Contatos"
+              data-lang-en="Contacts"
+            ></a>
+          </li>
+        </ul>
+      </nav>
 
-    <div class="section" id="Incial">
-        <img src="imgs\foto.jpg" alt="Foto" style="border-radius: 50%; width: 225px; height: 225px;">
-        <h2>Gustavo Michel</h2>
-        <div class="contact-container">
-            <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank" class="contact-bubble linkedin"></a>
-            <a href="https://github.com/Gustavo-michel" target="_blank" class="contact-bubble github"></a>
-        </div>
-        <div class="scroll-hint" onclick="scrollToSection()">
-            <span data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></span>
-            <div class="arrow-container">
-                <div class="arrow-line"></div>
-                <div class="arrow-icon"></div>
-            </div>
-        </div>
+      <!-- Language Switcher -->
+      <div class="flex gap-[10px] ml-[25px] -mr-[130px]">
+        <button
+          onclick="changeLanguage('pt')"
+          class="flex items-center text-[#c7c3c3] text-[1.0625rem] hover:text-[#939090] transition"
+        >
+          <span class="flag-icon flag-icon-br mr-[5px]"></span> PT
+        </button>
+        <button
+          onclick="changeLanguage('en')"
+          class="flex items-center text-[#c7c3c3] text-[1.0625rem] hover:text-[#939090] transition"
+        >
+          <span class="flag-icon flag-icon-us mr-[5px]"></span> EN
+        </button>
+      </div>
     </div>
+  </header>
 
-    <div class="section" id="Sobre">
-        <h2 class="section-title fade-in" data-lang data-lang-pt="Sobre mim" data-lang-en="About Me"></h2>
-        <p class="fade-in" data-lang data-lang-pt=" Estudo programação desde 2019, com foco na área de dados. Minha trajetória me levou a elaborar um plano de carreira sólido, desenvolvendo projetos e explorando novas tecnologias. Tenho experiência com Python, C++, SQL e diversas bibliotecas que utilizo para dados e IA, construção de modelos de Machine Learning e Deep Learning e todas as ferramentas que auxiliam a integrar aos sistemas." 
-        data-lang-en=" I have been studying programming since 2019, with focus on the data area. My path led me to develop a solid career plan, developing projects and exploring new technologies daily. I have experience in Python, C++, SQL and several libraries that I use for data and AI, building Machine Learning and Deep Learning models, in addition to their integration into systems."></p>
-    </div>
+  <!-- SEÇÃO INICIAL -->
+  <section id="Incial" class="py-[75px] text-center bg-[#F2F2F2]">
+    <div class="flex flex-col items-center">
+      <img
+        src="imgs/foto.jpg"
+        alt="Foto"
+        class="rounded-full"
+        style="width: 225px; height: 225px;"
+      />
+      <h2 class="mt-[20px] text-[2rem] text-[#101218] font-bold">Gustavo Michel</h2>
 
-    <div class="section" id="Stacks">
-        <h2 class="section-title fade-in" data-lang data-lang-pt="Tecnologias e Ferramentas" data-lang-en="Technologies and Tools"></h2>
-        <div class="bubble-container fade-in">
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" height="50" />  
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" height="50" alt="cplusplus logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" height="50" alt="SQL logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" height="50" alt="tensorflow logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" height="45" alt="Pandas logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" height="50" alt="Scikit-learn logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" height="50" alt="Azure logo"/>
-            <img width="15" />
-            <img class="bubble" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" height="50" alt="Jupyter logo"  /> 
-            <img width="15" />
+      <!-- Bolhas de contato -->
+      <div class="flex gap-[20px] mt-[20px]">
+        <a
+          href="https://www.linkedin.com/in/gustavo-michel-araujo/"
+          target="_blank"
+          class="w-[60px] h-[60px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+          style="background-image: url('imgs/lknd.png');"
+        ></a>
+        <a
+          href="https://github.com/Gustavo-michel"
+          target="_blank"
+          class="w-[60px] h-[60px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+          style="background-image: url('imgs/github.png');"
+        ></a>
+      </div>
+
+      <!-- Indicador de rolagem -->
+      <div
+        class="relative inline-flex flex-col items-center text-center text-[18px] font-bold cursor-pointer text-black mt-[20px] select-none gap-[5px] group"
+        onclick="scrollToSection()"
+      >
+        <span data-lang data-lang-pt="Contatos" data-lang-en="Contacts"></span>
+        <div class="relative w-[40px] h-[14px]">
+          <!-- Linha fixa -->
+          <div
+            class="absolute top-1/2 left-1/2 w-full h-[2px] bg-black transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 group-hover:opacity-0 group-hover:-translate-y-[2px]"
+          ></div>
+          <!-- Ícone de seta -->
+          <div
+            class="absolute top-0 left-1/2 w-[20px] h-[14px] transform -translate-x-1/2 translate-y-[10px] opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+          >
+            <div
+              class="absolute w-[12px] h-[12px] border-r-[2px] border-b-[2px] border-black transform rotate-45 left-1/2 top-0 -translate-x-1/2"
+            ></div>
+          </div>
         </div>
-        
+      </div>
     </div>
+  </section>
 
-    <!-- <div class="section">
-        <h2 class="fade-in" data-lang-pt="Educação" data-lang-en="Education"></h2>
-    </div> -->
+  <!-- SEÇÃO SOBRE -->
+  <section id="Sobre" class="py-[75px] text-center bg-[#E0E0E0]">
+    <div class="max-w-[925px] mx-auto px-[20px]">
+      <!-- Título com barra decorativa -->
+      <div class="flex flex-col items-center">
+        <div class="w-[60px] h-[5px] bg-[#101218] rounded mb-[10px]  -ml-[300px]"></div>
+        <h2
+          class="text-[2.5rem] text-[#101218] font-bold -ml-[250px]"
+          data-lang
+          data-lang-pt="Sobre mim"
+          data-lang-en="About Me"
+        ></h2>
+      </div>
+      <!-- Parágrafo -->
+      <p
+        class="mt-[20px] text-[27px] font-bold leading-[1.8] text-[#525357] text-justify"
+        data-lang
+        data-lang-pt="Estudo programação desde 2019, com foco na área de dados. Minha trajetória me levou a elaborar um plano de carreira sólido, desenvolvendo projetos e explorando novas tecnologias. Tenho experiência com Python, C++, SQL e diversas bibliotecas que utilizo para dados e IA, construção de modelos de Machine Learning e Deep Learning e todas as ferramentas que auxiliam a integrar aos sistemas."
+        data-lang-en="I have been studying programming since 2019, with focus on the data area. My path led me to develop a solid career plan, developing projects and exploring new technologies daily. I have experience in Python, C++, SQL and several libraries that I use for data and AI, building Machine Learning and Deep Learning models, in addition to their integration into systems."
+      ></p>
+    </div>
+  </section>
 
-    <div class="section" id="Projects"> 
-        <h2 class="section-title fade-in" data-lang data-lang-pt="Projetos" data-lang-en="Projects"></h2>
-        <div class="projects-container">
-        
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="Predição de Churn(cancelamento)" data-lang-en="Churn Prediction"></h3>
-                <div class="project-image" style="background-image: url('imgs/churnimg.png');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="análise exploratória de dados e previsão de rotatividade com um conjunto de dados bancários com aprendizado de máquina e implantação na web" data-lang-en="
-                    exploratory data analysis and churn prediction with a bank dataset with machine learning and web deployment">
-                </div>
-                </a>
+  <!-- SEÇÃO TECHNOLOGIES & TOOLS -->
+  <section id="Stacks" class="py-[75px] text-center bg-[#F2F2F2]">
+    <div class="max-w-[75rem] mx-auto px-[20px]">
+      <!-- Título com barra decorativa -->
+      <div class="flex flex-col items-center">
+        <div class="w-[60px] h-[5px] bg-[#101218] rounded mb-[10px]"></div>
+        <h2
+          class="text-[2.5rem] text-[#101218] font-bold"
+          data-lang
+          data-lang-pt="Tecnologias e Ferramentas"
+          data-lang-en="Technologies and Tools"
+        ></h2>
+      </div>
+
+      <!-- Bolhas de ícones com hover -->
+      <div class="mt-[30px] flex flex-wrap justify-center items-center gap-[15px]">
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+          alt="Python logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+          alt="C++ logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+          alt="SQL logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+          alt="TensorFlow logo"
+        />
+        <img
+          class="h-[45px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg"
+          alt="Pandas logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+          alt="Scikit-learn logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+          alt="Azure logo"
+        />
+        <img
+          class="h-[50px] transition-transform transform hover:scale-110"
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg"
+          alt="Jupyter logo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO PROJECTS -->
+  <section id="Projects" class="py-[75px] text-center bg-[#E0E0E0]">
+    <div class="max-w-[75rem] mx-auto px-[20px]">
+      <!-- Título -->
+      <div class="flex flex-col items-center">
+        <div class="w-[60px] h-[5px] bg-[#101218] rounded mb-[10px]"></div>
+        <h2
+          class="text-[2.5rem] text-[#101218] font-bold"
+          data-lang
+          data-lang-pt="Projetos"
+          data-lang-en="Projects"
+        ></h2>
+      </div>
+
+      <div class="mt-[40px] flex flex-wrap justify-center gap-[50px]">
+        <!-- Card 1 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]" data-lang data-lang-pt="Predição de Churn(cancelamento)" data-lang-en="Churn Prediction"></h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/churnimg.png');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="análise exploratória de dados e previsão de rotatividade com um conjunto de dados bancários com aprendizado de máquina e implantação na web" data-lang-en="exploratory data analysis and churn prediction with a bank dataset with machine learning and web deployment"></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Scikit-learn</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Pandas</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Flask</span>
+              </div>
             </div>
-
-            
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/HandMotion" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="HandMotion" data-lang-en="HandMotion"></h3>
-                <div class="project-image" style="background-image: url('imgs/Handmotion.png');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Sistema de rastreamento por gestos das mãos que utiliza OpenCV e MediaPipe com uma rede neural construida com Tensorflow para rastrear a posição das mãos via webcam e transformar em comandos ao computador em tempo real." 
-                    data-lang-en="Hand gesture tracking system that uses OpenCV and MediaPipe with a neural network built with Tensorflow to track hand position via webcam and transform it into commands to the computer in real time.">
-                </div>
-                </a>
-            </div>
-
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="Detecção de fraude no cartão de credito" data-lang-en="Credit card fraud detection"></h3>
-                <div class="project-image" style="background-image: url('imgs/creditfraud.jpg');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor" 
-                    data-lang-en="Exploratory data analysis and fraud prediction on credit card customers to prevent future fraud and consumer harm">
-                </div> 
-                </a>
-            </div>
-
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="Classificador de animais" data-lang-en="Animals classifier"></h3>
-                <div class="project-image" style="background-image: url('imgs/animals.jpg');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Classificador de animais usando Deep Learning com tensorflow e transferencia de aprendizado para indentificar especies" 
-                    data-lang-en="Animal classifier using Deep Learning with tensorflow and transfer learning to identify species"></p>
-                </div>
-                </a>
-            </div>
-
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/IA_Trader-MSFT" style="text-decoration: none; color: #000;">
-                <h3>IA Financial Trader Agent</h3>
-                <div class="project-image" style="background-image: url('imgs/iatrader.jpg');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações." 
-                    data-lang-en="This project is an implementation of an AI Trader that uses reinforcement learning to predict a company's actions. AI Trader is capable of making buying and selling decisions based on historical stock market data.">
-                </div>
-                </a>
-            </div>
-
-            <div class="project-card fade-in"><a href="https://github.com/Gustavo-michel/WorldAirQuality-AQICatergory-Classification" style="text-decoration: none; color: #000;">
-                <h3 data-lang data-lang-pt="Classificador Qualidade do Ar Mundial" data-lang-en="World Air Quality Classifier"></h3>
-                <div class="project-image" style="background-image: url('imgs/waq.png');"></div>
-                <div class="project-info">
-                    <p data-lang data-lang-pt="Mostra como é a qualidade do ar nas regiões ao redor do mundo, mostrando o pais e a cidade,Um Classificador consegue prever como será a qualidade do ar por região." data-lang-en="Shows what the air quality is like in regions around the world, showing the country and the city, A Classifier can predict what the air quality will be like by region.">
-                </div>
-                </a>
-            </div>
-
+          </a>
         </div>
-    </div>
-    <button id="backToTopBtn"><i class="fas fa-arrow-up"></i></button>
-    <script src="script.js"></script>
-        <footer>
-            <div class="contact-container" id="footer">
-                <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank" class="contact-bubble linkedin"></a>
-                <a href="mailto:gustavomichelads@gmail.com" class="contact-bubble gmail"></a>
-                <a href="https://github.com/Gustavo-michel" target="_blank" class="contact-bubble github"></a>
-                <a href="tel:+55 (11) 99434-5046" class="contact-bubble phone"></a>
+
+        <!-- Card 2 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/HandMotion" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]" data-lang data-lang-pt="HandMotion" data-lang-en="HandMotion"></h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/Handmotion.png');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="Sistema de rastreamento por gestos das mãos que utiliza OpenCV e MediaPipe com uma rede neural construida com Tensorflow para rastrear a posição das mãos via webcam e transformar em comandos ao computador em tempo real." data-lang-en="Hand gesture tracking system that uses OpenCV and MediaPipe with a neural network built with Tensorflow to track hand position via webcam and transform it into commands to the computer in real time."></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">OpenCV</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">TensorFlow</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">MediaPipe</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">PyAutoGUI</span>
+              </div>
             </div>
-            <div class="credits">Copyright © 2025 Gustavo Michel</div>
-        </footer>
+          </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]" data-lang data-lang-pt="Detecção de fraude no cartão de credito" data-lang-en="Credit card fraud detection"></h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/creditfraud.jpg');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="Análise exploratória de dados e previsão de fraude em clientes de cartão de crédito para prevenir futuras fraudes e danos ao consumidor" data-lang-en="Exploratory data analysis and fraud prediction on credit card customers to prevent future fraud and consumer harm"></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Scikit-learn</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Pandas</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Matplotlib</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]" data-lang data-lang-pt="Classificador de animais" data-lang-en="Animals classifier"></h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/animals.jpg');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="Classificador de animais usando Deep Learning com tensorflow e transferencia de aprendizado para indentificar especies" data-lang-en="Animal classifier using Deep Learning with tensorflow and transfer learning to identify species"></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">TensorFlow</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Streamlit</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/IA_Trader-MSFT" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]">IA Financial Trader Agent</h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/iatrader.jpg');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="Este projeto é uma implementação de uma IA Trader que utiliza aprendizagem por reforço para prever as ações de uma empresa. A IA Trader é capaz de tomar decisões de compra e venda com base em dados históricos do mercado de ações." data-lang-en="This project is an implementation of an AI Trader that uses reinforcement learning to predict a company's actions. AI Trader is capable of making buying and selling decisions based on historical stock market data."></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">TensorFlow</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="w-full sm:w-[48%] lg:w-[30%] bg-white/[.9] rounded-[12px] flex flex-col shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <a href="https://github.com/Gustavo-michel/WorldAirQuality-AQICatergory-Classification" class="flex flex-col h-full text-black no-underline">
+            <h3 class="mt-[20px] text-[1.125rem] font-semibold px-[20px] text-[#101218]" data-lang data-lang-pt="Classificador Qualidade do Ar Mundial" data-lang-en="World Air Quality Classifier"></h3>
+            <div class="h-[220px] m-[10px] rounded-[10px] bg-cover bg-center" style="background-image: url('imgs/waq.png');"></div>
+            <div class="px-[20px] pb-[20px] flex-1 flex flex-col">
+              <p class="text-[16px] font-normal leading-[1.6] text-[#374151] mb-[12px]" data-lang data-lang-pt="Mostra como é a qualidade do ar nas regiões ao redor do mundo, mostrando o pais e a cidade,Um Classificador consegue prever como será a qualidade do ar por região." data-lang-en="Shows what the air quality is like in regions around the world, showing the country and the city, A Classifier can predict what the air quality will be like by region."></p>
+              <div class="mt-auto flex flex-wrap gap-[10px]">
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Python</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Pandas</span>
+                <span class="inline-block bg-[#374151] text-white text-xs font-medium px-[10px] py-[5px] rounded">Plotly</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BOTÃO VOLTAR AO TOPO -->
+  <button
+    id="backToTopBtn"
+    class="hidden fixed bottom-[20px] right-[30px] z-[99] bg-[#55555576] text-white text-[18px] p-[20px] rounded-[20px] hover:bg-[#393939d7] transition"
+  >
+    <i class="fas fa-arrow-up text-[25px]"></i>
+  </button>
+
+  <script src="script.js"></script>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#504e4e] py-[25px] text-center">
+    <div class="flex justify-center items-center gap-[20px]">
+      <a
+        href="https://www.linkedin.com/in/gustavo-michel-araujo/"
+        target="_blank"
+        class="w-[60px] h-[60px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+        style="background-image: url('imgs/lknd.png');"
+      ></a>
+      <a
+        href="mailto:gustavomichelads@gmail.com"
+        class="w-[80px] h-[80px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+        style="background-image: url('imgs/gmail.png');"
+      ></a>
+      <a
+        href="https://github.com/Gustavo-michel"
+        target="_blank"
+        class="w-[60px] h-[60px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+        style="background-image: url('imgs/github.png');"
+      ></a>
+      <a
+        href="tel:+55 (11) 99434-5046"
+        class="w-[80px] h-[80px] rounded-full bg-contain bg-center bg-no-repeat opacity-70 transition transform hover:scale-110"
+        style="background-image: url('imgs/wpp.png');"
+      ></a>
+    </div>
+    <div class="mt-[20px] text-white">Copyright © 2025 Gustavo Michel</div>
+  </footer>
 </body>
 </html>
