@@ -17,5 +17,3 @@ Thumbs.db
 # Ambiente
 .env
 .env.local
-
-output.css
