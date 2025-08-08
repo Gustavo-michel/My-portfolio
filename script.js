@@ -1,63 +1,37 @@
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('.fade-in');
-    
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (sectionTop < (windowHeight * 1.00)) {
-            section.classList.add('active');
-        } else {
-            section.classList.remove('active');
+function changeLanguage(lang){
+      document.querySelectorAll('[data-lang]').forEach(el=>{
+        const v = el.getAttribute('data-lang-'+lang);
+        if(v) el.innerText = v;
+      });
+    }
+    // Try reading browser locale
+    const lang = (navigator.language||'pt').startsWith('en')? 'en':'pt';
+    changeLanguage(lang);
+
+    // Intersection observer for reveal animations
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
         }
+      });
+    },{threshold:0.12});
+
+    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+    // Back to top
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 300) toTop.style.display='block'; else toTop.style.display='none';
     });
-});
+    toTop.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
 
-let backToTopBtn = document.getElementById("backToTopBtn");
-
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        backToTopBtn.style.display = "block";
-    } else {
-        backToTopBtn.style.display = "none";
-    }
-}
-
-backToTopBtn.onclick = function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });}
-
-document.addEventListener('DOMContentLoaded', () => {
-changeLanguage('pt');
-});
-    function changeLanguage(lang) {
-const elements = document.querySelectorAll('[data-lang]');
-elements.forEach(element => {
-    element.innerHTML = element.getAttribute(`data-lang-${lang}`);
-});
-}
-const toggleThemeButton = document.getElementById('toggleTheme');
-const body = document.body;
-
-// Verificar o tema atual no carregamento da página
-const currentTheme = localStorage.getItem('theme') || 'dark';
-body.classList.add(`${currentTheme}-theme`);
-
-// Alterar o tema ao clicar no botão
-toggleThemeButton.addEventListener('click', () => {
-    if (body.classList.contains('dark-theme')) {
-        body.classList.replace('dark-theme', 'light-theme');
-        localStorage.setItem('theme', 'light');
-    } else {
-        body.classList.replace('light-theme', 'dark-theme');
-        localStorage.setItem('theme', 'dark');
-    }
-});
-
-function scrollToSection() {
-    document.querySelector("#footer").scrollIntoView({ behavior: "smooth" });
-}
+    // Small enhancement: smooth anchor scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+      });
+    });
