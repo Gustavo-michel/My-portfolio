@@ -3,14 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gustavo Michel — Portfolio</title>
-
+  <title>Gustavo Michel - Portfolio</title>
   <link rel="icon" href="imgs/icon.png" />
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="src/styles/style.css">
+  <link rel="stylesheet" href="src/styles/style.css">
 </head>
 <body>
   <header>
@@ -61,7 +57,6 @@
         <h2 data-lang data-lang-pt="Tecnologias e Ferramentas" data-lang-en="Technologies & Tools">Tecnologias & Ferramentas</h2>
       </div>
       <div class="stacks">
-        <!-- use the same devicon sources, wrapped in chips -->
         <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python"/><span>Python</span></div>
         <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="c++"/><span>C++</span></div>
         <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter"/><span>Jupyter</span></div>
@@ -73,7 +68,7 @@
       </div>
     </section>
 
-    <!-- ACADEMIC/FORMATION - new section between stacks and about as requested -->
+    <!-- ACADEMIC/FORMATION -->
     <section id="formacao" aria-label="Formação Acadêmica">
       <div class="section-title">
         <div class="bar"></div>
@@ -83,7 +78,6 @@
       <div class="timeline" id="timeline">
         <div class="timeline-line" aria-hidden="true"></div>
 
-        <!-- timeline items - use placeholder text (lorem) that you will change later -->
         <div class="timeline-item fade-up">
           <div class="card">
             <strong>2025 — 2028</strong>
@@ -119,13 +113,12 @@
       </div>
 
       <div class="projects">
-        <!-- Recreated cards (kept same links/images) -->
         <a class="project fade-up" href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict" target="_blank">
           <div class="thumb" style="background-image:url('imgs/churnimg.png')"></div>
           <h3>Predição de Churn</h3>
           <p style="color:var(--muted);font-size:.95rem">Análise exploratória e previsão de rotatividade com ML e deploy web.</p>
           <div class="tags" style="margin-top:10px">
-            <span class="tag">Python</span><span class="tag">Scikit-learn</span>
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Flask</span>
           </div>
         </a>
 
@@ -134,37 +127,39 @@
           <h3>HandMotion</h3>
           <p class="text">Rastreamento por gestos com MediaPipe, OpenCV e inferência em tempo real.</p>
           <div class="tags" style="margin-top:10px">
-            <span class="tag">Python</span><span class="tag">TensorFlow</span>
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Flask</span>
           </div>
         </a>
 
-        <!-- keep other projects similarly -->
         <a class="project fade-up" href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection" target="_blank">
           <div class="thumb" style="background-image:url('imgs/creditfraud.jpg')"></div>
           <h3>Detecção de Fraude</h3>
           <p class="text">Detecção de fraude em cartões com pipelines de ML.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Python</span><span class="tag">Pandas</span></div>
+          <div class="tags" style="margin-top:10px"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+          </div>
         </a>
 
         <a class="project fade-up" href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50" target="_blank">
           <div class="thumb" style="background-image:url('imgs/animals.jpg')"></div>
           <h3>Classificador de Animais</h3>
           <p class="text">Transfer learning com ResNet50 para classificação de espécies.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">TensorFlow</span></div>
+          <div class="tags" style="margin-top:10px"><span class="tag">TensorFlow</span><span class="tag">Streamlit</span></div>
         </a>
 
         <a class="project fade-up" href="https://github.com/Gustavo-michel/IA_Trader-MSFT" target="_blank">
           <div class="thumb" style="background-image:url('imgs/iatrader.jpg')"></div>
           <h3>IA Financial Trader Agent</h3>
           <p class="text">Agente com reinforcement learning para previsões de mercado.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Reinforcement Learning</span></div>
+          <div class="tags" style="margin-top:10px"><span class="tag">Reinforcement Learning</span><span class="tag">TensorFlow</span>
+          </div>
         </a>
 
         <a class="project fade-up" href="https://github.com/Gustavo-michel/WorldAirQuality-AQICatergory-Classification" target="_blank">
           <div class="thumb" style="background-image:url('imgs/waq.png')"></div>
           <h3>Classificador Qualidade do Ar</h3>
           <p class="text">Classificação e visualização de AQI por região.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Plotly</span></div>
+          <div class="tags" style="margin-top:10px"><span class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+          </div>
         </a>
       </div>
     </section>
