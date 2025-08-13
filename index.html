@@ -1,191 +1,441 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gustavo Michel - Portfolio</title>
-  <link rel="icon" href="imgs/icon.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/styles/style.css">
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <div class="logo">Gustavo Michel</div>
-        <div style="color:var(--muted);font-size:.9rem">Data & ML Engineer</div>
-      </div>
-      <nav class="navlinks">
-        <a href="#sobre" data-lang data-lang-pt="Sobre" data-lang-en="About">Sobre</a>
-        <a href="#stacks" data-lang data-lang-pt="Tecnologias" data-lang-en="Tech">Tecnologias</a>
-        <a href="#formacao" data-lang data-lang-pt="Formação" data-lang-en="Education">Formação</a>
-        <a href="#projects" data-lang data-lang-pt="Projetos" data-lang-en="Projects">Projetos</a>
-        <a href="docs/Currículo_Gustavo_Michel.pdf" target="_blank" data-lang data-lang-pt="Currículo" data-lang-en="Resume">Currículo</a>
-      </nav>
-       <div class="top-social">
-        <a href="https://github.com/Gustavo-michel" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2c-3.3.7-4-1.6-4-1.6a3.2 3.2 0 0 0-1.3-1.7c-1-.7.1-.7.1-.7a2.5 2.5 0 0 1 1.9 1.3 2.6 2.6 0 0 0 3.5 1 2.6 2.6 0 0 1 .8-1.6c-2.6-.3-5.3-1.3-5.3-5.7A4.5 4.5 0 0 1 6 8.2a4.2 4.2 0 0 1 .1-3.1s1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2a4.2 4.2 0 0 1 .1 3.1 4.5 4.5 0 0 1 1.2 3.1c0 4.4-2.7 5.4-5.3 5.7a3 3 0 0 1 .9 2.3v3.4c0 .4.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank">
-          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.6c0-1.34 0-3.07-1.88-3.07s-2.17 1.47-2.17 3v5.67h-3.55V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.36-1.85c3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- HERO -->
-    <section class="hero" id="sobre">
-      <div class="avatar fade-up">
-        <img src="imgs/foto.jpg" alt="Foto de Gustavo" />
-      </div>
-      <div class="intro">
-        <h1 class="fade-up">Gustavo Michel</h1>
-        <p class="fade-up">Estudo programação há 6 anos com foco em dados, modelagem e integração de soluções de Machine Learning em produção. Trabalho com Python, C++, SQL, frameworks de ML e todas as ferramentas para construção e deployment de modelos de aprendizado de máquina.</p>
-
-        <div class="ctas fade-up">
-          <a class="btn btn-primary" href="#projects">Ver Projetos</a>
-          <a class="btn btn-ghost" href="#footer">Contatos</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- STACKS -->
-    <section id="stacks">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2 data-lang data-lang-pt="Tecnologias e Ferramentas" data-lang-en="Technologies & Tools">Tecnologias & Ferramentas</h2>
-      </div>
-      <div class="stacks">
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python"/><span>Python</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="c++"/><span>C++</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter"/><span>Jupyter</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" alt="tf"/><span>TensorFlow</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" alt="pandas"/><span>Pandas</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="sklearn"/><span>Scikit-learn</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="azure"/><span>Azure</span></div>
-        <div class="chip fade-up"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="gcp"/><span>GCP</span></div>
-      </div>
-    </section>
-
-    <!-- ACADEMIC/FORMATION -->
-    <section id="formacao" aria-label="Formação Acadêmica">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2 data-lang data-lang-pt="Formação Acadêmica" data-lang-en="Education">Formação Acadêmica</h2>
-      </div>
-
-      <div class="timeline" id="timeline">
-        <div class="timeline-line" aria-hidden="true"></div>
-
-        <div class="timeline-item fade-up">
-          <div class="card">
-            <strong>2025 — 2028</strong>
-            <div style="color:var(--muted);margin-top:6px">Tecnólogo em análise e desenvolvimento de sistemas — FATEC Zona Leste</div>
-            <p style="margin-top:10px;color:var(--muted);font-size:.95rem">Capacitado para analisar, projetar, documentar, especificar, testar, implantar e manter sistemas de informação. O curso também prepara o estudante para atuar com ferramentas computacionais, infraestrutura de TI, além de promover habilidades em matemática discreta e estatística aplicada, senso crítico, trabalho em equipe e responsabilidade social e ambiental.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gustavo Michel - Portfolio</title>
+    <link rel="icon" href="imgs/icon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <div class="brand">
+          <div class="logo">Gustavo Michel</div>
+          <div style="color: var(--muted); font-size: 0.9rem">
+            Data & ML Engineer
           </div>
         </div>
+        <nav class="navlinks">
+          <a href="#sobre" data-lang data-lang-pt="Sobre" data-lang-en="About"
+            >Sobre</a
+          >
+          <a
+            href="#stacks"
+            data-lang
+            data-lang-pt="Tecnologias"
+            data-lang-en="Tech"
+            >Tecnologias</a
+          >
+          <a
+            href="#formacao"
+            data-lang
+            data-lang-pt="Formação"
+            data-lang-en="Education"
+            >Formação</a
+          >
+          <a
+            href="#projects"
+            data-lang
+            data-lang-pt="Projetos"
+            data-lang-en="Projects"
+            >Projetos</a
+          >
+          <a
+            href="docs/Currículo_Gustavo_Michel.pdf"
+            target="_blank"
+            data-lang
+            data-lang-pt="Currículo"
+            data-lang-en="Resume"
+            >Currículo</a
+          >
+        </nav>
+        <div class="top-social">
+          <a href="https://github.com/Gustavo-michel" target="_blank">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.6v-2c-3.3.7-4-1.6-4-1.6a3.2 3.2 0 0 0-1.3-1.7c-1-.7.1-.7.1-.7a2.5 2.5 0 0 1 1.9 1.3 2.6 2.6 0 0 0 3.5 1 2.6 2.6 0 0 1 .8-1.6c-2.6-.3-5.3-1.3-5.3-5.7A4.5 4.5 0 0 1 6 8.2a4.2 4.2 0 0 1 .1-3.1s1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2a4.2 4.2 0 0 1 .1 3.1 4.5 4.5 0 0 1 1.2 3.1c0 4.4-2.7 5.4-5.3 5.7a3 3 0 0 1 .9 2.3v3.4c0 .4.2.7.8.6A12 12 0 0 0 12 .3z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/gustavo-michel-araujo/"
+            target="_blank"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.45 20.45h-3.55v-5.6c0-1.34 0-3.07-1.88-3.07s-2.17 1.47-2.17 3v5.67h-3.55V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.36-1.85c3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
 
-        <div class="timeline-item fade-up">
-          <div class="card">
-            <strong>2025</strong>
-            <div style="color:var(--muted);margin-top:6px">Curso profissionalizante — Instituto PROA</div>
-            <p style="margin-top:10px;color:var(--muted);font-size:.95rem; text-align: justify;">Programa gratuito e semipresencial com duração de seis meses, voltado à formação em programação e ao desenvolvimento pessoal. No núcleo técnico, o curso promove competências em programação e desenvolvimento de sistemas por meio de trabalho em grupo, projetos práticos e vivências corporativas. Já o núcleo comportamental foca em autoconhecimento, propósito profissional, carreira e mercado de trabalho. A formação inclui ainda incentivos como uniforme, material didático e certificados (PROA e Senac), e se destaca pelo alto índice de empregabilidade entre os formandos.</p>
+    <main class="container">
+      <!-- HERO -->
+      <section class="hero" id="sobre">
+        <div class="avatar fade-up">
+          <img src="imgs/foto.jpg" alt="Foto de Gustavo" />
+        </div>
+        <div class="intro">
+          <h1 class="fade-up">Gustavo Michel</h1>
+          <p class="fade-up">
+            Estudo programação há 6 anos com foco em dados, modelagem e
+            integração de soluções de Machine Learning em produção. Trabalho com
+            Python, C++, SQL, frameworks de ML e todas as ferramentas para
+            construção e deployment de modelos de aprendizado de máquina.
+          </p>
+
+          <div class="ctas fade-up">
+            <a class="btn btn-primary" href="#projects">Ver Projetos</a>
+            <a class="btn btn-ghost" href="#footer">Contatos</a>
           </div>
         </div>
+      </section>
 
-        <div class="timeline-item fade-up">
-          <div class="card">
-            <strong>2022 — 2024</strong>
-            <div style="color:var(--muted);margin-top:6px">Curso Técnico em Desenvolvimento de Sistemas — Programa NOVOTEC</div>
-            <p style="margin-top:10px;color:var(--muted);font-size:.95rem">Formação com foco prático na análise de problemas organizacionais e na criação de soluções tecnológicas eficientes. O profissional formado é capaz de dimensionar requisitos para projetos, testar programas de computador, realizar manutenção, modelar, implementar e manter bancos de dados, além de adotar normas técnicas durante o desenvolvimento de sistemas.</p>
+      <!-- STACKS -->
+      <section id="stacks">
+        <div class="section-title">
+          <div class="bar"></div>
+          <h2
+            data-lang
+            data-lang-pt="Tecnologias e Ferramentas"
+            data-lang-en="Technologies & Tools"
+          >
+            Tecnologias & Ferramentas
+          </h2>
+        </div>
+        <div class="stacks">
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+              alt="python"
+            /><span>Python</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+              alt="c++"
+            /><span>C++</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg"
+              alt="jupyter"
+            /><span>Jupyter</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
+              alt="tf"
+            /><span>TensorFlow</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg"
+              alt="pandas"
+            /><span>Pandas</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg"
+              alt="sklearn"
+            /><span>Scikit-learn</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+              alt="azure"
+            /><span>Azure</span>
+          </div>
+          <div class="chip fade-up">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+              alt="gcp"
+            /><span>GCP</span>
           </div>
         </div>
+      </section>
 
+      <!-- ACADEMIC/FORMATION -->
+      <section id="formacao" aria-label="Formação Acadêmica">
+        <div class="section-title">
+          <div class="bar"></div>
+          <h2
+            data-lang
+            data-lang-pt="Formação Acadêmica"
+            data-lang-en="Education"
+          >
+            Formação Acadêmica
+          </h2>
+        </div>
+
+        <div class="timeline" id="timeline">
+          <div class="timeline-line" aria-hidden="true"></div>
+
+          <div class="timeline-item fade-up">
+            <div class="card">
+              <strong>2025 — 2028</strong>
+              <div style="color: var(--muted); margin-top: 6px">
+                Tecnólogo em análise e desenvolvimento de sistemas — FATEC Zona
+                Leste
+              </div>
+              <p
+                style="
+                  margin-top: 10px;
+                  color: var(--muted);
+                  font-size: 0.95rem;
+                "
+              >
+                Capacitado para analisar, projetar, documentar, especificar,
+                testar, implantar e manter sistemas de informação. O curso
+                também prepara o estudante para atuar com ferramentas
+                computacionais, infraestrutura de TI, além de promover
+                habilidades em matemática discreta e estatística aplicada, senso
+                crítico, trabalho em equipe e responsabilidade social e
+                ambiental.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-up">
+            <div class="card">
+              <strong>2025</strong>
+              <div style="color: var(--muted); margin-top: 6px">
+                Curso profissionalizante — Instituto PROA
+              </div>
+              <p
+                style="
+                  margin-top: 10px;
+                  color: var(--muted);
+                  font-size: 0.95rem;
+                  text-align: justify;
+                "
+              >
+                Programa gratuito e semipresencial com duração de seis meses,
+                voltado à formação em programação e ao desenvolvimento pessoal.
+                No núcleo técnico, o curso promove competências em programação e
+                desenvolvimento de sistemas por meio de trabalho em grupo,
+                projetos práticos e vivências corporativas. Já o núcleo
+                comportamental foca em autoconhecimento, propósito profissional,
+                carreira e mercado de trabalho. A formação inclui ainda
+                incentivos como uniforme, material didático e certificados (PROA
+                e Senac), e se destaca pelo alto índice de empregabilidade entre
+                os formandos.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-up">
+            <div class="card">
+              <strong>2022 — 2024</strong>
+              <div style="color: var(--muted); margin-top: 6px">
+                Curso Técnico em Desenvolvimento de Sistemas — Programa NOVOTEC
+              </div>
+              <p
+                style="
+                  margin-top: 10px;
+                  color: var(--muted);
+                  font-size: 0.95rem;
+                "
+              >
+                Formação com foco prático na análise de problemas
+                organizacionais e na criação de soluções tecnológicas
+                eficientes. O profissional formado é capaz de dimensionar
+                requisitos para projetos, testar programas de computador,
+                realizar manutenção, modelar, implementar e manter bancos de
+                dados, além de adotar normas técnicas durante o desenvolvimento
+                de sistemas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="section-title">
+          <div class="bar"></div>
+          <h2 data-lang data-lang-pt="Projetos" data-lang-en="Projects">
+            Projetos
+          </h2>
+        </div>
+
+        <div class="projects">
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/churnimg.png')"
+            ></div>
+            <h3>Predição de Churn</h3>
+            <p style="color: var(--muted); font-size: 0.95rem">
+              Análise exploratória e previsão de rotatividade com ML e deploy
+              web.
+            </p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">Python</span><span class="tag">Pandas</span
+              ><span class="tag">Scikit-learn</span
+              ><span class="tag">Flask</span>
+            </div>
+          </a>
+
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/HandMotion"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/Handmotion.png')"
+            ></div>
+            <h3>HandMotion</h3>
+            <p class="text">
+              Rastreamento por gestos com MediaPipe, OpenCV e inferência em
+              tempo real.
+            </p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">Python</span><span class="tag">TensorFlow</span
+              ><span class="tag">OpenCV</span><span class="tag">Flask</span>
+            </div>
+          </a>
+
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/creditfraud.jpg')"
+            ></div>
+            <h3>Detecção de Fraude</h3>
+            <p class="text">
+              Detecção de fraude em cartões com pipelines de ML.
+            </p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">Python</span><span class="tag">Pandas</span
+              ><span class="tag">Scikit-learn</span>
+            </div>
+          </a>
+
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/animals.jpg')"
+            ></div>
+            <h3>Classificador de Animais</h3>
+            <p class="text">
+              Transfer learning com ResNet50 para classificação de espécies.
+            </p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">TensorFlow</span
+              ><span class="tag">Streamlit</span>
+            </div>
+          </a>
+
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/IA_Trader-MSFT"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/iatrader.jpg')"
+            ></div>
+            <h3>IA Financial Trader Agent</h3>
+            <p class="text">
+              Agente com reinforcement learning para previsões de mercado.
+            </p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">Reinforcement Learning</span
+              ><span class="tag">TensorFlow</span>
+            </div>
+          </a>
+
+          <a
+            class="project fade-up"
+            href="https://github.com/Gustavo-michel/WorldAirQuality-AQICatergory-Classification"
+            target="_blank"
+          >
+            <div
+              class="thumb"
+              style="background-image: url('imgs/waq.png')"
+            ></div>
+            <h3>Classificador Qualidade do Ar</h3>
+            <p class="text">Classificação e visualização de AQI por região.</p>
+            <div class="tags" style="margin-top: 10px">
+              <span class="tag">Plotly</span><span class="tag">Pandas</span
+              ><span class="tag">Scikit-learn</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="container">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 12px;
+          "
+        >
+          <a
+            href="https://www.linkedin.com/in/gustavo-michel-araujo/"
+            target="_blank"
+            ><img
+              src="imgs/linkedin.png"
+              alt="LinkedIn"
+              style="height: 46px; border-radius: 10px"
+          /></a>
+          <a href="mailto:gustavomichelads@gmail.com"
+            ><img
+              src="imgs/gmail.png"
+              alt="Email"
+              style="height: 46px; border-radius: 10px"
+          /></a>
+          <a href="https://github.com/Gustavo-michel" target="_blank"
+            ><img
+              src="imgs/github.png"
+              alt="GitHub"
+              style="height: 46px; border-radius: 10px"
+          /></a>
+        </div>
+        <div style="color: var(--muted)">Copyright © 2025 Gustavo Michel</div>
       </div>
-    </section>
+    </footer>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <div class="section-title">
-        <div class="bar"></div>
-        <h2 data-lang data-lang-pt="Projetos" data-lang-en="Projects">Projetos</h2>
-      </div>
+    <button class="to-top" id="toTop" aria-label="Voltar ao topo">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#333"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </button>
 
-      <div class="projects">
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/Churn-BankCostumer-Predict" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/churnimg.png')"></div>
-          <h3>Predição de Churn</h3>
-          <p style="color:var(--muted);font-size:.95rem">Análise exploratória e previsão de rotatividade com ML e deploy web.</p>
-          <div class="tags" style="margin-top:10px">
-            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span><span class="tag">Flask</span>
-          </div>
-        </a>
-
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/HandMotion" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/Handmotion.png')"></div>
-          <h3>HandMotion</h3>
-          <p class="text">Rastreamento por gestos com MediaPipe, OpenCV e inferência em tempo real.</p>
-          <div class="tags" style="margin-top:10px">
-            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">OpenCV</span><span class="tag">Flask</span>
-          </div>
-        </a>
-
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/Credit-Card-Fraud-Detection" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/creditfraud.jpg')"></div>
-          <h3>Detecção de Fraude</h3>
-          <p class="text">Detecção de fraude em cartões com pipelines de ML.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
-          </div>
-        </a>
-
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/AnimalsClassification-WithResNet50" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/animals.jpg')"></div>
-          <h3>Classificador de Animais</h3>
-          <p class="text">Transfer learning com ResNet50 para classificação de espécies.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">TensorFlow</span><span class="tag">Streamlit</span></div>
-        </a>
-
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/IA_Trader-MSFT" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/iatrader.jpg')"></div>
-          <h3>IA Financial Trader Agent</h3>
-          <p class="text">Agente com reinforcement learning para previsões de mercado.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Reinforcement Learning</span><span class="tag">TensorFlow</span>
-          </div>
-        </a>
-
-        <a class="project fade-up" href="https://github.com/Gustavo-michel/WorldAirQuality-AQICatergory-Classification" target="_blank">
-          <div class="thumb" style="background-image:url('imgs/waq.png')"></div>
-          <h3>Classificador Qualidade do Ar</h3>
-          <p class="text">Classificação e visualização de AQI por região.</p>
-          <div class="tags" style="margin-top:10px"><span class="tag">Plotly</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
-          </div>
-        </a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer id="footer">
-    <div class="container">
-      <div style="display:flex;justify-content:center;gap:18px;margin-bottom:12px">
-        <a href="https://www.linkedin.com/in/gustavo-michel-araujo/" target="_blank"><img src="imgs/linkedin.png" alt="LinkedIn" style="height:46px;border-radius:10px;"/></a>
-        <a href="mailto:gustavomichelads@gmail.com"><img src="imgs/gmail.png" alt="Email" style="height:46px;border-radius:10px;"/></a>
-        <a href="https://github.com/Gustavo-michel" target="_blank"><img src="imgs/github.png" alt="GitHub" style="height:46px;border-radius:10px;"/></a>
-      </div>
-      <div style="color:var(--muted)">Copyright © 2025 Gustavo Michel</div>
-    </div>
-  </footer>
-
-<button class="to-top" id="toTop" aria-label="Voltar ao topo">
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <line x1="12" y1="19" x2="12" y2="5"></line>
-    <polyline points="5 12 12 5 19 12"></polyline>
-  </svg>
-</button>
-
-
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
