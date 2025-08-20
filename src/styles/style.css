@@ -3,7 +3,9 @@
    --panel: #0f1724;
    --muted: #93a3b8;
    --accent: #00d4ff;
+   --accent-hover: #02a7c8;
    --accent-2: #7c5cff;
+   --accent-2-hover: #5e46bf;
    --glass: rgba(255, 255, 255, 0.03);
    --card: rgba(255, 255, 255, 0.03);
    --soft: rgba(255, 255, 255, 0.02);
@@ -104,7 +106,7 @@
  .top-social a:hover svg {
    fill: var(--accent)
  }
-
+/* 
  .lang-switch {
    display: flex;
    gap: 6px;
@@ -128,7 +130,7 @@
    width: 20px;
    height: 14px;
    display: block;
- }
+ } */
 
  /* Hero */
  .hero {
@@ -180,19 +182,26 @@
    border-radius: 10px;
    font-weight: 600;
    border: 1px solid transparent;
-   cursor: pointer
+   cursor: pointer;
+   text-decoration: none;
  }
 
  .btn-primary {
    background: linear-gradient(90deg, var(--accent), var(--accent-2));
    color: #041025;
-   box-shadow: 0 8px 24px rgba(0, 212, 255, 0.08)
+   box-shadow: 0 8px 24px rgba(0, 212, 255, 0.08);
+ }
+ .btn-primary:hover{
+  background: linear-gradient(90deg, var(--accent-hover), var(--accent-2-hover));
  }
 
  .btn-ghost {
    background: transparent;
    border: 1px solid rgba(255, 255, 255, 0.06);
-   color: var(--muted)
+   color: var(--muted);
+ }
+ .btn-ghost:hover{
+  background: rgba(0, 0, 0, 0.10);
  }
 
  /* Sections */
@@ -377,6 +386,7 @@
     right: 20px;
     bottom: 20px;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    opacity: 0.75;
     color: #041025;
     padding: 12px;
     border-radius: 8px;
