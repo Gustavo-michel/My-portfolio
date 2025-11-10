@@ -1,13 +1,13 @@
  :root {
-   --bg: #0b1020;
-   --panel: #0f1724;
-   --muted: #93a3b8;
-   --accent: #00d4ff;
-   --accent-hover: #02a7c8;
-   --accent-2: #7c5cff;
-   --accent-2-hover: #5e46bf;
-   --glass: rgba(255, 255, 255, 0.03);
-   --card: rgba(255, 255, 255, 0.03);
+  --bg: #120d10; 
+   --panel: #161013; 
+   --muted: #b3a6ac;
+   --accent: #ff3d3d;
+   --accent-hover: #e83131;
+   --accent-2: #b00038;
+   --accent-2-hover: #8a002c;
+   --glass: rgba(255, 255, 255, 0.04);
+   --card: rgba(255, 255, 255, 0.035);
    --soft: rgba(255, 255, 255, 0.02);
    --radius: 14px;
    color-scheme: dark;
@@ -26,9 +26,9 @@
 
  body {
    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-   background: linear-gradient(180deg, var(--bg) 0%, #08101a 100%);
+   background: linear-gradient(180deg, var(--bg) 0%, #100b0d 100%);
    background-attachment: fixed;
-   color: #e6eef8;
+   color: #f0e9ec;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    line-height: 1.45;
@@ -86,7 +86,7 @@
 
  .navlinks a:hover {
    color: #fff;
-   background: linear-gradient(90deg, rgba(0, 212, 255, 0.08), rgba(124, 92, 255, 0.06));
+   background: linear-gradient(90deg, rgba(255, 61, 61, 0.12), rgba(176, 0, 56, 0.10));
    transform: translateY(-3px)
  }
 
@@ -187,8 +187,8 @@
 
  .btn-primary {
    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-   color: #041025;
-   box-shadow: 0 8px 24px rgba(0, 212, 255, 0.08);
+   color: #1b0e12;
+   box-shadow: 0 8px 24px rgba(255, 61, 61, 0.18);
  }
  .btn-primary:hover{
   background: linear-gradient(90deg, var(--accent-hover), var(--accent-2-hover));
@@ -359,6 +359,18 @@
    font-size: .95rem;
  }
 
+ /* Project titles */
+ .project h3 {
+   color: var(--accent-2);
+   margin-bottom: 6px;
+   transition: color .25s ease;
+ }
+
+ .project:hover h3,
+ .project:focus-visible h3 {
+   color: var(--accent);
+ }
+
  /* Footer */
  footer {
    padding: 36px 0;
@@ -385,14 +397,14 @@
     right: 20px;
     bottom: 20px;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    opacity: 0.75;
-    color: #041025;
+    opacity: 0.8;
+    color: #1b0e12;
     padding: 12px;
     border-radius: 8px;
     border: none;
     display: none;
     cursor: pointer;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
     z-index: 80;
     transition: transform 0.2s ease, background 0.3s ease;
     width: 44px;
@@ -404,7 +416,7 @@
 
   .to-top:hover {
     transform: translateY(-3px);
-    background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    background: linear-gradient(135deg, var(--accent-hover), var(--accent-2-hover));
   }
 
 
