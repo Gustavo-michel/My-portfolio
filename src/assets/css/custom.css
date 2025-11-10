@@ -1,0 +1,19 @@
+.resume-header .picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: none;
+}
+
+.picture:not(.resume-header .picture) {
+  position: static !important;
+  float: none !important;
+  display: inline-block;
+  max-width: 100% !important;
+}
+
+.resume-header {
+  overflow: hidden;
+}

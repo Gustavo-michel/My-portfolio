@@ -17,3 +17,5 @@ Thumbs.db
 # Ambiente
 .env
 .env.local
+
+src/assets/fontawesome/

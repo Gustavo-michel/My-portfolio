@@ -1,4 +1,3 @@
-// Intersection observer for reveal animations
 const io = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -22,7 +21,6 @@ toTop.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
 
-// Small enhancement: smooth anchor scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
