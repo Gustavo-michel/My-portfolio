@@ -1,11 +1,11 @@
  :root {
-  --bg: #120d10; 
-   --panel: #161013; 
-   --muted: #b3a6ac;
-   --accent: #ff3d3d;
-   --accent-hover: #e83131;
-   --accent-2: #b00038;
-   --accent-2-hover: #8a002c;
+  --bg: #0a0f1f; 
+   --panel: #131520; 
+   --muted: #8892b0;
+   --accent: #00d9ff;
+   --accent-hover: #00a8cc;
+   --accent-2: #6366f1;
+   --accent-2-hover: #4f46e5;
    --glass: rgba(255, 255, 255, 0.04);
    --card: rgba(255, 255, 255, 0.035);
    --soft: rgba(255, 255, 255, 0.02);
