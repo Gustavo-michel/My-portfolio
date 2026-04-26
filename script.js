@@ -12,6 +12,7 @@ const io = new IntersectionObserver(
 document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
 
 const themeToggle = document.getElementById("themeToggle");
+const langToggle = document.getElementById("langToggle");
 const root = document.documentElement;
 
 const applyTheme = (theme) => {
@@ -38,6 +39,57 @@ applyTheme(root.dataset.theme === "light" ? "light" : "dark");
 themeToggle?.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
   applyTheme(nextTheme);
+});
+
+const applyLanguage = (language) => {
+  const normalizedLanguage = language === "en" ? "en" : "pt";
+
+  root.lang = normalizedLanguage === "en" ? "en" : "pt-BR";
+
+  document.querySelectorAll("[data-lang]").forEach((element) => {
+    const text =
+      normalizedLanguage === "en"
+        ? element.dataset.langEn
+        : element.dataset.langPt;
+
+    if (text) {
+      element.innerHTML = text;
+    }
+  });
+
+  if (langToggle) {
+    langToggle.innerHTML =
+      normalizedLanguage === "en"
+        ? '<span class="flag-icon flag-icon--us" aria-hidden="true"></span>'
+        : '<span class="flag-icon flag-icon--br" aria-hidden="true"></span>';
+    langToggle.setAttribute(
+      "aria-label",
+      normalizedLanguage === "en"
+        ? "Traduzir para portugues"
+        : "Traduzir para ingles"
+    );
+  }
+
+  try {
+    localStorage.setItem("language", normalizedLanguage);
+  } catch {
+    // Language still changes for the current session when storage is unavailable.
+  }
+};
+
+let savedLanguage = "pt";
+
+try {
+  savedLanguage = localStorage.getItem("language") || "pt";
+} catch {
+  savedLanguage = "pt";
+}
+
+applyLanguage(savedLanguage);
+
+langToggle?.addEventListener("click", () => {
+  const nextLanguage = root.lang === "en" ? "pt" : "en";
+  applyLanguage(nextLanguage);
 });
 
 const timeline = document.getElementById("timeline");

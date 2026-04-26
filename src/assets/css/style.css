@@ -97,10 +97,13 @@
  }
 
  .nav {
-   display: flex;
+   display: grid;
+   grid-template-columns: 320px 1fr 320px;
    align-items: center;
    gap: 20px;
-   justify-content: space-between;
+   max-width: none;
+   padding-left: 30px;
+   padding-right: 20px;
    padding-top: 22px;
    padding-bottom: 22px;
    transition: padding .24s ease;
@@ -115,6 +118,8 @@
    display: flex;
    align-items: center;
    gap: 16px;
+   justify-self: start;
+   white-space: nowrap;
    transition: gap .24s ease;
  }
 
@@ -136,7 +141,8 @@
  .navlinks {
    display: flex;
    gap: 14px;
-   align-items: center
+   align-items: center;
+   justify-self: center
  }
 
  .navlinks a {
@@ -157,32 +163,18 @@
    padding: 6px 10px;
  }
 
- /* Social icons top */
- .top-social {
-   display: flex;
-   gap: 12px
- }
-
- .top-social a svg {
-   width: 22px;
-   height: 22px;
-   fill: var(--muted);
-   transition: .2s
- }
-
- header.scrolled .top-social a svg {
-   width: 20px;
-   height: 20px;
- }
-
- .top-social a:hover svg {
-   fill: var(--accent)
- }
-
- .theme-toggle {
+ .header-actions {
    position: absolute;
    top: 50%;
    right: 20px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   transform: translateY(-50%);
+ }
+
+ .theme-toggle,
+ .lang-toggle {
    width: 44px;
    height: 44px;
    display: inline-flex;
@@ -193,14 +185,75 @@
    background: rgba(255, 255, 255, 0.04);
    color: var(--accent);
    cursor: pointer;
-   transform: translateY(-50%);
    transition: background .22s ease, border-color .22s ease, color .22s ease, box-shadow .22s ease;
  }
 
- .theme-toggle:hover {
+ .theme-toggle:hover,
+ .lang-toggle:hover {
    background: rgba(0, 217, 255, 0.10);
    border-color: rgba(0, 217, 255, 0.24);
    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.10);
+ }
+
+ .lang-toggle {
+   line-height: 1;
+ }
+
+ .flag-icon {
+   position: relative;
+   display: block;
+   width: 26px;
+   height: 18px;
+   overflow: hidden;
+   border-radius: 3px;
+   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 2px 5px rgba(0, 0, 0, 0.18);
+ }
+
+ .flag-icon--br {
+   background: #229e45;
+ }
+
+ .flag-icon--br::before {
+   content: "";
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 15px;
+   height: 15px;
+   background: #f8df00;
+   transform: translate(-50%, -50%) rotate(45deg);
+ }
+
+ .flag-icon--br::after {
+   content: "";
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 8px;
+   height: 8px;
+   border-radius: 999px;
+   background: #0033a0;
+   transform: translate(-50%, -50%);
+ }
+
+ .flag-icon--us {
+   background: repeating-linear-gradient(
+     to bottom,
+     #b22234 0,
+     #b22234 1.38px,
+     #fff 1.38px,
+     #fff 2.76px
+   );
+ }
+
+ .flag-icon--us::before {
+   content: "";
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 11px;
+   height: 9.7px;
+   background: #3c3b6e;
  }
 
  .theme-toggle svg {
@@ -223,7 +276,8 @@
    display: none;
  }
 
- html[data-theme="light"] .theme-toggle {
+ html[data-theme="light"] .theme-toggle,
+ html[data-theme="light"] .lang-toggle {
    background: rgba(255, 255, 255, 0.88);
    border-color: rgba(9, 17, 31, 0.12);
    color: var(--accent-2);
