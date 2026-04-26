@@ -11,6 +11,23 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
 
+const timeline = document.getElementById("timeline");
+
+const updateTimelineProgress = () => {
+  if (!timeline) return;
+
+  const rect = timeline.getBoundingClientRect();
+  const viewportAnchor = window.innerHeight * 0.68;
+  const progress = (viewportAnchor - rect.top) / rect.height;
+  const clampedProgress = Math.min(Math.max(progress, 0), 1);
+
+  timeline.style.setProperty("--timeline-progress", clampedProgress.toFixed(3));
+};
+
+updateTimelineProgress();
+window.addEventListener("scroll", updateTimelineProgress, { passive: true });
+window.addEventListener("resize", updateTimelineProgress);
+
 // Back to top
 const toTop = document.getElementById("toTop");
 window.addEventListener("scroll", () => {
