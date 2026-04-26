@@ -13,10 +13,17 @@ document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
 
 // Back to top
 const toTop = document.getElementById("toTop");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) toTop.style.display = "block";
-  else toTop.style.display = "none";
-});
+const header = document.querySelector("header");
+
+const updateScrollState = () => {
+  const hasScrolled = window.scrollY > 40;
+
+  header.classList.toggle("scrolled", hasScrolled);
+  toTop.style.display = window.scrollY > 300 ? "flex" : "none";
+};
+
+updateScrollState();
+window.addEventListener("scroll", updateScrollState);
 toTop.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );

@@ -24,15 +24,20 @@
    height: 100%
  }
 
+ html {
+   scroll-padding-top: 92px;
+ }
+
  body {
    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-   background: linear-gradient(180deg, var(--bg) 0%, #100b0d 100%);
+   background: linear-gradient(180deg, var(--bg) 0%, #11162f 100%);
    background-attachment: fixed;
    color: #f0e9ec;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    line-height: 1.45;
    overflow-x: hidden;
+   padding-top: 92px;
  }
 
  .container {
@@ -45,29 +50,56 @@
  header {
    backdrop-filter: blur(6px);
    background: linear-gradient(90deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-   position: sticky;
+   position: fixed;
    top: 0;
-   z-index: 50;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.03)
+   left: 0;
+   right: 0;
+   z-index: 90;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+   transition: background .24s ease, box-shadow .24s ease, border-color .24s ease;
+ }
+
+ header.scrolled {
+   background: rgba(10, 15, 31, 0.86);
+   border-bottom-color: rgba(0, 217, 255, 0.12);
+   box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
  }
 
  .nav {
    display: flex;
    align-items: center;
    gap: 20px;
-   justify-content: space-between
+   justify-content: space-between;
+   padding-top: 22px;
+   padding-bottom: 22px;
+   transition: padding .24s ease;
+ }
+
+ header.scrolled .nav {
+   padding-top: 12px;
+   padding-bottom: 12px;
  }
 
  .brand {
    display: flex;
    align-items: center;
-   gap: 16px
+   gap: 16px;
+   transition: gap .24s ease;
+ }
+
+ header.scrolled .brand {
+   gap: 12px;
  }
 
  .brand .logo {
    font-weight: 700;
    font-size: 1.1rem;
-   color: var(--accent)
+   color: var(--accent);
+   transition: font-size .24s ease;
+ }
+
+ header.scrolled .brand .logo {
+   font-size: 1rem;
  }
 
  .navlinks {
@@ -81,13 +113,17 @@
    text-decoration: none;
    padding: 8px 12px;
    border-radius: 10px;
-   transition: all .22s
+   transition: all .22s;
  }
 
  .navlinks a:hover {
    color: #fff;
-   background: linear-gradient(90deg, rgba(255, 61, 61, 0.12), rgba(176, 0, 56, 0.10));
+   background: linear-gradient(90deg, rgba(0, 217, 255, 0.12), rgba(99, 102, 241, 0.10));
    transform: translateY(-3px)
+ }
+
+ header.scrolled .navlinks a {
+   padding: 6px 10px;
  }
 
  /* Social icons top */
@@ -101,6 +137,11 @@
    height: 22px;
    fill: var(--muted);
    transition: .2s
+ }
+
+ header.scrolled .top-social a svg {
+   width: 20px;
+   height: 20px;
  }
 
  .top-social a:hover svg {
@@ -187,8 +228,8 @@
 
  .btn-primary {
    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-   color: #1b0e12;
-   box-shadow: 0 8px 24px rgba(255, 61, 61, 0.18);
+   color: #07111f;
+   box-shadow: 0 8px 24px rgba(0, 217, 255, 0.18);
  }
  .btn-primary:hover{
   background: linear-gradient(90deg, var(--accent-hover), var(--accent-2-hover));
@@ -398,7 +439,7 @@
     bottom: 20px;
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     opacity: 0.8;
-    color: #1b0e12;
+    color: #07111f;
     padding: 12px;
     border-radius: 8px;
     border: none;
@@ -409,7 +450,6 @@
     transition: transform 0.2s ease, background 0.3s ease;
     width: 44px;
     height: 44px;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
