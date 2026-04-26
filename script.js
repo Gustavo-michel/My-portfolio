@@ -11,6 +11,35 @@ const io = new IntersectionObserver(
 
 document.querySelectorAll(".fade-up").forEach((el) => io.observe(el));
 
+const themeToggle = document.getElementById("themeToggle");
+const root = document.documentElement;
+
+const applyTheme = (theme) => {
+  const isLight = theme === "light";
+
+  root.dataset.theme = theme;
+
+  try {
+    localStorage.setItem("theme", theme);
+  } catch {
+    // Theme still changes for the current session when storage is unavailable.
+  }
+
+  if (themeToggle) {
+    themeToggle.setAttribute(
+      "aria-label",
+      isLight ? "Alternar para modo escuro" : "Alternar para modo claro"
+    );
+  }
+};
+
+applyTheme(root.dataset.theme === "light" ? "light" : "dark");
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = root.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+});
+
 const timeline = document.getElementById("timeline");
 
 const updateTimelineProgress = () => {
